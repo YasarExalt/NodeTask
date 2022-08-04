@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css">
+  <title>Document</title>
+</head>
+<body class="form-body">
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">Toffy</div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+        <li><a href="/">Home</a></li>
+      </div>
+    </ul>
+  </nav>
+
+  <form class="ccform" method="POST" action="/edituser/<%= rows[0]?.id %>" novalidate> 
+
+  <div class="col-6">
+    <div class="ccfield-prepend">
+      <label for="floatingInput">First Name</label>
+      <input type="text" class="ccformfield" id="floatingInput" value="<%= rows[0]?.first_name %>" placeholder="First Name" name="first_name">
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="ccfield-prepend">
+      <label for="floatingInput">Last Name</label>
+      <input type="text" class="ccformfield" id="floatingInput" value="<%= rows[0]?.last_name %>" placeholder="Last Name" name="last_name">
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="ccfield-prepend">
+      <label for="floatingInput">Email</label>
+      <input type="email" class="ccformfield" id="floatingInput" value="<%= rows[0]?.email %>" placeholder="email@email.com" name="email">
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="ccfield-prepend">
+      <label for="floatingInput">Phone</label>
+      <input type="text" class="ccformfield" id="floatingInput" value="<%= rows[0]?.phone %>" placeholder="Phone" name="phone">
+    </div>
+  </div>
+  <div class="ccfield-prepend">
+    <input class="ccbtn" type="submit" value="Submit">
+</div>
+</form>
+
+</body>
+</html>
+
+
